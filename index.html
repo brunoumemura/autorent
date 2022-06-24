@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoRent</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navigation">
+      <div class="wrapper">
+        <a class="logo" href="#home">
+          <svg
+            width="300"
+            height="60"
+            viewBox="0 0 133 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+          <svg width="126" height="18" viewBox="0 0 126 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g style="mix-blend-mode:darken">
+            <path d="M15.5542 17H9.55713L8.81592 13.6196H4.87402L4.1665 17H0.112305L4.15527 1.12012H11.1855L15.5542 17ZM6.89551 3.59082L5.35693 10.9917H8.56885L7.24365 3.59082H6.89551ZM24.0557 17.3257C22.9401 17.3257 21.9368 17.1647 21.0459 16.8428C20.1624 16.5133 19.41 16.0229 18.7886 15.3716C18.1672 14.7127 17.6917 13.8892 17.3623 12.9009C17.0329 11.9126 16.8682 10.7559 16.8682 9.43066V1.12012H21.8994V9.45312C21.8994 10.1943 21.9368 10.8532 22.0117 11.4297C22.0866 12.0062 22.2139 12.4966 22.3936 12.9009C22.5732 13.2977 22.8128 13.6009 23.1123 13.8105C23.4118 14.0202 23.7861 14.125 24.2354 14.125C24.7295 14.125 25.1263 14.0202 25.4258 13.8105C25.7327 13.6009 25.9686 13.2977 26.1333 12.9009C26.3055 12.4966 26.4215 12.0062 26.4814 11.4297C26.5413 10.8532 26.5713 10.1943 26.5713 9.45312V1.12012H30.7715V9.43066C30.7715 10.7633 30.6405 11.9238 30.3784 12.9121C30.1164 13.9004 29.7083 14.724 29.1543 15.3828C28.6077 16.0342 27.9115 16.5208 27.0654 16.8428C26.2269 17.1647 25.2236 17.3257 24.0557 17.3257ZM36.4092 17V4.78125H32.8154V1.12012H45.1128V4.78125H41.4404V17H36.4092ZM54.1646 17.3257C53.1838 17.3257 52.3078 17.2171 51.5366 17C50.7655 16.7904 50.0841 16.4984 49.4927 16.124C48.9087 15.7422 48.4108 15.293 47.999 14.7764C47.5947 14.2523 47.2616 13.687 46.9995 13.0806C46.745 12.4666 46.5578 11.8228 46.438 11.1489C46.3257 10.4751 46.2695 9.79004 46.2695 9.09375C46.2695 8.40495 46.3407 7.72363 46.4829 7.0498C46.6252 6.36849 46.8385 5.72087 47.123 5.10693C47.4076 4.493 47.7669 3.92399 48.2012 3.3999C48.6354 2.87581 49.1445 2.42285 49.7285 2.04102C50.3125 1.65918 50.9714 1.3597 51.7051 1.14258C52.4463 0.925456 53.2661 0.816895 54.1646 0.816895C55.063 0.816895 55.8791 0.925456 56.6128 1.14258C57.354 1.3597 58.0166 1.65918 58.6006 2.04102C59.1921 2.42285 59.7049 2.87581 60.1392 3.3999C60.5734 3.92399 60.9328 4.493 61.2173 5.10693C61.5093 5.72087 61.7264 6.36849 61.8687 7.0498C62.0109 7.72363 62.082 8.40495 62.082 9.09375C62.082 9.79004 62.0221 10.4751 61.9023 11.1489C61.7826 11.8228 61.5916 12.4666 61.3296 13.0806C61.075 13.687 60.7419 14.2523 60.3301 14.7764C59.9183 15.293 59.4204 15.7422 58.8364 16.124C58.2524 16.4984 57.5711 16.7904 56.7925 17C56.0213 17.2171 55.1453 17.3257 54.1646 17.3257ZM51.3008 9.09375C51.3008 9.99219 51.3644 10.7596 51.4917 11.396C51.6265 12.0324 51.8136 12.5527 52.0532 12.957C52.3003 13.3613 52.5998 13.6571 52.9517 13.8442C53.311 14.0314 53.7153 14.125 54.1646 14.125C54.6138 14.125 55.0143 14.0314 55.3662 13.8442C55.7256 13.6571 56.0288 13.3613 56.2759 12.957C56.5304 12.5527 56.7214 12.0324 56.8486 11.396C56.9834 10.7596 57.0508 9.99219 57.0508 9.09375C57.0508 8.19531 56.9834 7.4279 56.8486 6.7915C56.7214 6.14762 56.5304 5.62354 56.2759 5.21924C56.0288 4.80745 55.7256 4.50423 55.3662 4.30957C55.0143 4.11491 54.6138 4.01758 54.1646 4.01758C53.7153 4.01758 53.311 4.11491 52.9517 4.30957C52.5998 4.50423 52.3003 4.80745 52.0532 5.21924C51.8136 5.62354 51.6265 6.14762 51.4917 6.7915C51.3644 7.4279 51.3008 8.19531 51.3008 9.09375Z" fill="black"/>
+            <path d="M65.0469 1.12012H72.1895C73.32 1.12012 74.3158 1.26986 75.1768 1.56934C76.0378 1.86133 76.7528 2.25065 77.3218 2.7373C77.8983 3.21647 78.3325 3.76302 78.6245 4.37695C78.9165 4.9834 79.0625 5.59733 79.0625 6.21875C79.0625 6.7054 79.0138 7.18831 78.9165 7.66748C78.8192 8.13916 78.647 8.58838 78.3999 9.01514C78.1528 9.43441 77.8122 9.81624 77.3779 10.1606C76.9512 10.4976 76.4046 10.7708 75.7383 10.9805C75.8356 11.2949 76.0003 11.6842 76.2324 12.1484C76.4645 12.6126 76.734 13.1143 77.041 13.6533C77.348 14.1924 77.6774 14.7502 78.0293 15.3267C78.3812 15.9032 78.7256 16.4609 79.0625 17H73.3125C72.9906 16.2738 72.6611 15.4614 72.3242 14.563C71.9873 13.6571 71.7178 12.6725 71.5156 11.6094H70.0781V17H65.0469V1.12012ZM70.9316 9.09375C71.5007 9.09375 71.9798 9.01888 72.3691 8.86914C72.766 8.7194 73.0879 8.52474 73.335 8.28516C73.582 8.04557 73.758 7.77604 73.8628 7.47656C73.9751 7.17708 74.0312 6.8776 74.0312 6.57812C74.0312 5.98665 73.9489 5.50374 73.7842 5.12939C73.6195 4.75505 73.3949 4.46305 73.1104 4.25342C72.8258 4.0363 72.4964 3.8903 72.1221 3.81543C71.7477 3.74056 71.3472 3.70312 70.9204 3.70312H70.0781V9.09375H70.9316ZM81.4097 1.12012H92.5503V4.0625H86.4409V7.42041H91.8315V10.2954H86.4409V13.7656H92.5503V17H81.4097V1.12012ZM96.2227 1.12012H101.085L107.127 9.09375V1.12012H110.968V17H105.982L100.03 8.55469V17H96.2227V1.12012ZM116.595 17V4.78125H113.001V1.12012H125.298V4.78125H121.626V17H116.595Z" fill="#BD00FF"/>
+            </g>
+            </svg>
+          
+            />
+          </svg>
+        </a>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a onclick="closeMenu()" href="#home">Início</a>
+            </li>
+            <li><a onclick="closeMenu()" href="#services">Locação</a></li>
+            <li><a onclick="closeMenu()" href="#about2">Colocar para locação</a></li>
+          </ul>
+
+          <a class="button" onclick="closeMenu()" href="#contact"
+            >Alugue seu carro</a
+          >
+
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/unicv.centrouniversitario/"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/unicv.centrouniversitario">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.youtube.com/c/UNIFCVCentroUniversit%C3%A1rioCidadeVerde">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>BOAS-VINDAS AO AUTORENT 👋</h4>
+            <h1>Alugue seu carro de modo pratico e rapido</h1>
+          </header>
+
+          <div class="content">
+            <p>
+              Voce podera alugar seu carro que estaria parado para ganhar uma renda extra, ou alugue um carro de modo pratico e rapido.
+              
+            </p>
+            <a class="button" href="#contact">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+              <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.0607 13.0607C17.6464 12.4749 17.6464 11.5251 17.0607 10.9393L7.51472 1.3934C6.92893 0.807612 5.97918 0.807612 5.3934 1.3934C4.80761 1.97918 4.80761 2.92893 5.3934 3.51472L13.8787 12L5.3934 20.4853C4.80761 21.0711 4.80761 22.0208 5.3934 22.6066C5.97918 23.1924 6.92893 23.1924 7.51472 22.6066L17.0607 13.0607ZM0 13.5H16V10.5H0V13.5Z" fill="white"/>
+                </svg>
+                
+                
+                />
+              </svg>
+
+              Alugue um carro aqui
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/carroPNG.png"
+            alt="Imagem de um carro prata"
+          
+          />
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <h3>+3.500</h3>
+            <p>Carros para alugar</p>
+          </div>
+
+          <div class="stat">
+            <h3>+15</h3>
+            <p>Cidades cadastradas</p>
+          </div>
+
+          <div class="stat">
+            <h3>5</h3>
+            <p>Anos no mercado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrapper">
+        <header>
+          <h4>CARROS PARA LOCAÇÃO</h4>
+          <h2>Alguns modelos de carros disponiveis</h2>
+        </header>
+
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+              <img
+            src="./../IMG CARROS/GOLF.png"
+            alt="Imagem de um carro prata"
+          
+          />
+
+              <h3>Golf GTI</h3>
+              <p>
+                E um carro com 5 portas,
+                Ar condicionado,
+                5 Lugares,
+                Direção Hidráulica,
+                Air Bag,
+                Transmissão Manual.
+              </p>
+              <section id="home">
+              
+           
+             
+              </section>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <img
+            src="./../IMG CARROS/POLO.png"
+            alt="Imagem de um carro prata"
+          
+          />
+
+              <h3>Novo Polo</h3>
+              <p>
+                E um carro com 5 portas,
+                Ar condicionado,
+                5 Lugares,
+                Direção Hidráulica,
+                Air Bag,
+                Transmissão Manual.
+              </p>
+              <section id="home">
+              
+                
+             
+              </section>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <img
+            src="./../IMG CARROS/UP.png"
+            alt="Imagem de um carro prata"
+          
+          />
+
+              <h3>UP</h3>
+              <p>
+                E um carro com 5 portas,
+                Ar condicionado,
+                5 Lugares,
+                Direção Hidráulica,
+                Air Bag,
+                Transmissão Manual.                                                  
+
+              </p>
+              <section id="home">
+              
+
+            </section>
+            </div>
+            
+            
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <img
+            src="./../IMG CARROS/HILUX.png"
+            alt="Imagem de um carro prata"
+          
+          />
+
+              <h3>Hilux</h3>
+              <p>
+                E um carro com 5 portas,
+                Ar condicionado,
+                5 Lugares,
+                Direção Hidráulica,
+                Air Bag,
+                Transmissão Manual.
+              </p>
+              <section id="home">
+              
+
+             
+              </section>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <img
+            src="./../IMG CARROS/ONIX.png"
+            alt="Imagem de um carro prata"
+          
+          />
+
+              <h3>Onix LTZ</h3>
+              <p>
+                E um carro com 5 portas,
+                Ar condicionado,
+                5 Lugares,
+                Direção Hidráulica,
+                Air Bag,
+                Transmissão Manual..
+              </p>
+              <section id="home">
+              
+
+             
+              </section>
+            </div>
+
+            <div class="card">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="12" fill="#DCE9E2" />
+                <path
+                  d="M17.091 8.18182L10.091 15.1818L6.90918 12"
+                  stroke="#00856F"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <img
+            src="./../IMG CARROS/GOL.png"
+            alt="Imagem de um carro prata"
+          
+          />
+
+              <h3>Gol</h3>
+              <p>
+                E um carro com 5 portas,
+                Ar condicionado,
+                5 Lugares,
+                Direção Hidráulica,
+                Air Bag,
+                Transmissão Manual.
+              </p>
+              <section id="home">
+              
+
+             
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about2">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Colocar para locação</h4>
+            <h2>Quer ganhar uma renda extra?</h2>
+          </header>
+
+          <div class="content">
+            <p>
+               Alugue seu carro, simples assim, uma forma prática de ganhar dinheiro e ajudar alguma pessoa que precisa de um veículo por um período de tempo.
+            </p>
+          </div>
+          
+          <ul>
+          <li>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a                           
+          class="button"
+          href="./loginLocatario/login.html"
+          target="_blank"
+        >
+          <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.0607 13.0607C17.6464 12.4749 17.6464 11.5251 17.0607 10.9393L7.51472 1.3934C6.92893 0.807612 5.97918 0.807612 5.3934 1.3934C4.80761 1.97918 4.80761 2.92893 5.3934 3.51472L13.8787 12L5.3934 20.4853C4.80761 21.0711 4.80761 22.0208 5.3934 22.6066C5.97918 23.1924 6.92893 23.1924 7.51472 22.6066L17.0607 13.0607ZM0 13.5H16V10.5H0V13.5Z" fill="white"/>
+          </svg>
+
+          Colocar para locação       
+        </a>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/jenny-ueberberg-jI6rCVv9IFk-unsplash.jpg"
+            alt="mulher dirigindo um carro"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>Sobre nós</h4>
+            <h2>Entenda quem somos nós</h2>
+          </header>
+
+          <div class="content">
+            <p>
+              Somos uma startup de locação de automóveis com a possibilidade de uma pessoa fisica 
+              normal poder colocar seu automóvel para locação.
+
+            </p>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/imagemChave.png"
+            alt="Uma mao com uma chave de carro"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h2>Entre em contato com a gente!</h2>
+          </header>
+
+          <div class="content">
+            <ul>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                Av. Advogado Horácio Raccanello Filho, 5950, Maringá - PR, 
+              </li>
+              <li>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M22 6L12 13L2 6"
+                    stroke="#00856F"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                contato@autorent.com
+              </li>
+            </ul>
+
+            <a
+              class="button"
+              href="./Login/login.html"
+              target="_blank"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                  fill="white"
+                />
+              </svg>
+
+              faça login
+            </a>
+            <a
+            class="button"
+            href="./Formulario-main/index.html"
+            target="_blank"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                fill="white"
+              />
+            </svg>
+
+            Cadastre aqui
+          </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/takahiro-taguchi-_SKIDRiIEtk-unsplash.jpg"
+            alt="uma pessoa digirigindo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#home">
+            <svg
+              width="133"
+              height="18"
+              viewBox="0 0 133 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+            <path d="M15.5542 17H9.55713L8.81592 13.6196H4.87402L4.1665 17H0.112305L4.15527 1.12012H11.1855L15.5542 17ZM6.89551 3.59082L5.35693 10.9917H8.56885L7.24365 3.59082H6.89551ZM24.0557 17.3257C22.9401 17.3257 21.9368 17.1647 21.0459 16.8428C20.1624 16.5133 19.41 16.0229 18.7886 15.3716C18.1672 14.7127 17.6917 13.8892 17.3623 12.9009C17.0329 11.9126 16.8682 10.7559 16.8682 9.43066V1.12012H21.8994V9.45312C21.8994 10.1943 21.9368 10.8532 22.0117 11.4297C22.0866 12.0062 22.2139 12.4966 22.3936 12.9009C22.5732 13.2977 22.8128 13.6009 23.1123 13.8105C23.4118 14.0202 23.7861 14.125 24.2354 14.125C24.7295 14.125 25.1263 14.0202 25.4258 13.8105C25.7327 13.6009 25.9686 13.2977 26.1333 12.9009C26.3055 12.4966 26.4215 12.0062 26.4814 11.4297C26.5413 10.8532 26.5713 10.1943 26.5713 9.45312V1.12012H30.7715V9.43066C30.7715 10.7633 30.6405 11.9238 30.3784 12.9121C30.1164 13.9004 29.7083 14.724 29.1543 15.3828C28.6077 16.0342 27.9115 16.5208 27.0654 16.8428C26.2269 17.1647 25.2236 17.3257 24.0557 17.3257ZM36.4092 17V4.78125H32.8154V1.12012H45.1128V4.78125H41.4404V17H36.4092ZM54.1646 17.3257C53.1838 17.3257 52.3078 17.2171 51.5366 17C50.7655 16.7904 50.0841 16.4984 49.4927 16.124C48.9087 15.7422 48.4108 15.293 47.999 14.7764C47.5947 14.2523 47.2616 13.687 46.9995 13.0806C46.745 12.4666 46.5578 11.8228 46.438 11.1489C46.3257 10.4751 46.2695 9.79004 46.2695 9.09375C46.2695 8.40495 46.3407 7.72363 46.4829 7.0498C46.6252 6.36849 46.8385 5.72087 47.123 5.10693C47.4076 4.493 47.7669 3.92399 48.2012 3.3999C48.6354 2.87581 49.1445 2.42285 49.7285 2.04102C50.3125 1.65918 50.9714 1.3597 51.7051 1.14258C52.4463 0.925456 53.2661 0.816895 54.1646 0.816895C55.063 0.816895 55.8791 0.925456 56.6128 1.14258C57.354 1.3597 58.0166 1.65918 58.6006 2.04102C59.1921 2.42285 59.7049 2.87581 60.1392 3.3999C60.5734 3.92399 60.9328 4.493 61.2173 5.10693C61.5093 5.72087 61.7264 6.36849 61.8687 7.0498C62.0109 7.72363 62.082 8.40495 62.082 9.09375C62.082 9.79004 62.0221 10.4751 61.9023 11.1489C61.7826 11.8228 61.5916 12.4666 61.3296 13.0806C61.075 13.687 60.7419 14.2523 60.3301 14.7764C59.9183 15.293 59.4204 15.7422 58.8364 16.124C58.2524 16.4984 57.5711 16.7904 56.7925 17C56.0213 17.2171 55.1453 17.3257 54.1646 17.3257ZM51.3008 9.09375C51.3008 9.99219 51.3644 10.7596 51.4917 11.396C51.6265 12.0324 51.8136 12.5527 52.0532 12.957C52.3003 13.3613 52.5998 13.6571 52.9517 13.8442C53.311 14.0314 53.7153 14.125 54.1646 14.125C54.6138 14.125 55.0143 14.0314 55.3662 13.8442C55.7256 13.6571 56.0288 13.3613 56.2759 12.957C56.5304 12.5527 56.7214 12.0324 56.8486 11.396C56.9834 10.7596 57.0508 9.99219 57.0508 9.09375C57.0508 8.19531 56.9834 7.4279 56.8486 6.7915C56.7214 6.14762 56.5304 5.62354 56.2759 5.21924C56.0288 4.80745 55.7256 4.50423 55.3662 4.30957C55.0143 4.11491 54.6138 4.01758 54.1646 4.01758C53.7153 4.01758 53.311 4.11491 52.9517 4.30957C52.5998 4.50423 52.3003 4.80745 52.0532 5.21924C51.8136 5.62354 51.6265 6.14762 51.4917 6.7915C51.3644 7.4279 51.3008 8.19531 51.3008 9.09375Z" fill="black"/>
+            <path d="M65.0469 1.12012H72.1895C73.32 1.12012 74.3158 1.26986 75.1768 1.56934C76.0378 1.86133 76.7528 2.25065 77.3218 2.7373C77.8983 3.21647 78.3325 3.76302 78.6245 4.37695C78.9165 4.9834 79.0625 5.59733 79.0625 6.21875C79.0625 6.7054 79.0138 7.18831 78.9165 7.66748C78.8192 8.13916 78.647 8.58838 78.3999 9.01514C78.1528 9.43441 77.8122 9.81624 77.3779 10.1606C76.9512 10.4976 76.4046 10.7708 75.7383 10.9805C75.8356 11.2949 76.0003 11.6842 76.2324 12.1484C76.4645 12.6126 76.734 13.1143 77.041 13.6533C77.348 14.1924 77.6774 14.7502 78.0293 15.3267C78.3812 15.9032 78.7256 16.4609 79.0625 17H73.3125C72.9906 16.2738 72.6611 15.4614 72.3242 14.563C71.9873 13.6571 71.7178 12.6725 71.5156 11.6094H70.0781V17H65.0469V1.12012ZM70.9316 9.09375C71.5007 9.09375 71.9798 9.01888 72.3691 8.86914C72.766 8.7194 73.0879 8.52474 73.335 8.28516C73.582 8.04557 73.758 7.77604 73.8628 7.47656C73.9751 7.17708 74.0312 6.8776 74.0312 6.57812C74.0312 5.98665 73.9489 5.50374 73.7842 5.12939C73.6195 4.75505 73.3949 4.46305 73.1104 4.25342C72.8258 4.0363 72.4964 3.8903 72.1221 3.81543C71.7477 3.74056 71.3472 3.70312 70.9204 3.70312H70.0781V9.09375H70.9316ZM81.4097 1.12012H92.5503V4.0625H86.4409V7.42041H91.8315V10.2954H86.4409V13.7656H92.5503V17H81.4097V1.12012ZM96.2227 1.12012H101.085L107.127 9.09375V1.12012H110.968V17H105.982L100.03 8.55469V17H96.2227V1.12012ZM116.595 17V4.78125H113.001V1.12012H125.298V4.78125H121.626V17H116.595Z" fill="#BD00FF"/>              
+              />
+            </svg>
+          </a>
+
+          <p>
+            ©2022 AutoRent Cars. <br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+
+        <div class="col-b">
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/unicv.centrouniversitario/"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.facebook.com/unicv.centrouniversitario">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 1.99997H15C13.6739 1.99997 12.4021 2.52675 11.4645 3.46444C10.5268 4.40212 10 5.67389 10 6.99997V9.99997H7V14H10V22H14V14H17L18 9.99997H14V6.99997C14 6.73475 14.1054 6.4804 14.2929 6.29286C14.4804 6.10533 14.7348 5.99997 15 5.99997H18V1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.youtube.com/c/UNIFCVCentroUniversit%C3%A1rioCidadeVerde">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.5396 6.42C22.4208 5.94541 22.1789 5.51057 21.8382 5.15941C21.4976 4.80824 21.0703 4.55318 20.5996 4.42C18.8796 4 11.9996 4 11.9996 4C11.9996 4 5.1196 4 3.3996 4.46C2.92884 4.59318 2.50157 4.84824 2.16094 5.19941C1.82031 5.55057 1.57838 5.98541 1.4596 6.46C1.14481 8.20556 0.990831 9.97631 0.999595 11.75C0.988374 13.537 1.14236 15.3213 1.4596 17.08C1.59055 17.5398 1.8379 17.9581 2.17774 18.2945C2.51758 18.6308 2.93842 18.8738 3.3996 19C5.1196 19.46 11.9996 19.46 11.9996 19.46C11.9996 19.46 18.8796 19.46 20.5996 19C21.0703 18.8668 21.4976 18.6118 21.8382 18.2606C22.1789 17.9094 22.4208 17.4746 22.5396 17C22.852 15.2676 23.0059 13.5103 22.9996 11.75C23.0108 9.96295 22.8568 8.1787 22.5396 6.42Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a id="backToTopButton" href="#home">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <!-- ScrollReaveal Lib -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
